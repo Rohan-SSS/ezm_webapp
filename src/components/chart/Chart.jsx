@@ -1,4 +1,5 @@
-import { HighchartsReact } from 'highcharts-react-official';
+import { HighchartsReact } from 'highcharts-react-official'
+import Highcharts from 'highcharts'
 import React from 'react'
 
 function Chart(props){

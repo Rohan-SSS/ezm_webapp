@@ -1,9 +1,14 @@
 import React from 'react'
-
+import { Navbar, Chart } from './components'
 const App = () => {
   return (
-    <div>
-        <h1>Hi</h1>
+    <div>|
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <Chart />
+      </div>
     </div>
   )
 }
