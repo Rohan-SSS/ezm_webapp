@@ -1,0 +1,18 @@
+.ezm__navbar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  
+  .ezm__navbar h2 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  
+  .ezm__navbar p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
