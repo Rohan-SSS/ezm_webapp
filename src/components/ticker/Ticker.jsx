@@ -1,4 +1,5 @@
 import React from "react"
+import './ticker.css'
 
 const Ticker = props => {
   const { widgetProps, widgetPropsAny } = props
@@ -35,12 +36,20 @@ const Ticker = props => {
             title: "EUR/USD"
           },
           {
+            proName: "FX_IDC:GBPJPY",
+            title: "GBP/JPY"
+          },
+          {
+            proName: "FX_IDC:USDJPY",
+            title: "USD/JPY"
+          },
+          {
             proName: "BITSTAMP:BTCUSD",
-            title: "BTC/USD"
+            title: "Bitcoin"
           },
           {
             proName: "BITSTAMP:ETHUSD",
-            title: "ETH/USD"
+            title: "Ethereum"
           }
         ],
         ...widgetProps,
@@ -60,7 +69,7 @@ const Ticker = props => {
     }
   }, [ref, widgetProps, widgetPropsAny])
 
-  return <div ref={ref} />
+  return <div ref={ref} className='ezm__ticker'/>
 }
 
 export default Ticker

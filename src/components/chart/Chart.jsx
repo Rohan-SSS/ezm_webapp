@@ -1,7 +1,5 @@
-// TradingViewWidget.jsx
-
 import React, { useEffect, useRef } from 'react';
-
+import './chart.css'
 let tvScriptLoadingPromise;
 
 export default function TradingViewWidget() {
@@ -30,8 +28,8 @@ export default function TradingViewWidget() {
       function createWidget() {
         if (document.getElementById('tradingview_dee36') && 'TradingView' in window) {
           new window.TradingView.widget({
-            width: 980,
-            height: 610,
+            width: "1200px",
+            height: "610px",
             symbol: "OANDA:XAUUSD",
             interval: "30",
             timezone: "Etc/UTC",
