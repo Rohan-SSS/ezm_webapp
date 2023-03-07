@@ -1,11 +1,17 @@
-import React from 'react'
+import {  Ticker, Chart, Navbar } from './components'
 
 const App = () => {
   return (
     <div>
-        <h1>Hi</h1>
+      <div >
+        <Ticker />
+      </div>
+      <div>
+        <Chart />
+      </div>
+      
     </div>
   )
 }
 
-export default App
+export default Appx
