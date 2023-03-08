@@ -28,8 +28,8 @@ export default function TradingViewWidget() {
       function createWidget() {
         if (document.getElementById('tradingview_dee36') && 'TradingView' in window) {
           new window.TradingView.widget({
-            width: "1200px",
-            height: "610px",
+            width: "1280",
+            heigth: "960",
             symbol: "OANDA:XAUUSD",
             interval: "30",
             timezone: "Etc/UTC",
@@ -49,7 +49,7 @@ export default function TradingViewWidget() {
 
   return (
     <div className='tradingview-widget-container'>
-      <div id='tradingview_dee36' />
+      <div classname='tradingview-widget-container-chart'id='tradingview_dee36' />
     </div>
   );
 }

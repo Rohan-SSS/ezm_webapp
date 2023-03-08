@@ -3,10 +3,9 @@ import './App.css'
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       <div >
         <Ticker />
-        <hr></hr>
       </div>
       <div>
         <div>
@@ -17,7 +16,6 @@ const App = () => {
         </div>
       </div>
       <div>
-        <hr></hr>
         <Insights />
       </div>
     </div>
