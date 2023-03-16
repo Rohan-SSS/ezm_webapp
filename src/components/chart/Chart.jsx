@@ -30,6 +30,7 @@ export default function TradingViewWidget() {
         if (containerElement && 'TradingView' in window) {
           const widget = new window.TradingView.widget({
             width: "100%",
+            height: "618px",
             symbol: "OANDA:XAUUSD",
             interval: "30",
             timezone: "Etc/UTC",
