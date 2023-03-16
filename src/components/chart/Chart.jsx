@@ -26,10 +26,10 @@ export default function TradingViewWidget() {
       return () => onLoadScriptRef.current = null;
 
       function createWidget() {
-        if (document.getElementById('tradingview_dee36') && 'TradingView' in window) {
-          new window.TradingView.widget({
-            width: "1280",
-            heigth: "960",
+        const containerElement = document.getElementById('tradingview_dee36');
+        if (containerElement && 'TradingView' in window) {
+          const widget = new window.TradingView.widget({
+            width: "100%",
             symbol: "OANDA:XAUUSD",
             interval: "30",
             timezone: "Etc/UTC",
@@ -41,6 +41,11 @@ export default function TradingViewWidget() {
             allow_symbol_change: true,
             container_id: "tradingview_dee36"
           });
+      
+          // Resize the widget to fit the container size
+          widget.onChartReady(() => {
+            widget.resize(containerElement.offsetWidth, containerElement.offsetHeight);
+          });
         }
       }
     },
@@ -49,7 +54,7 @@ export default function TradingViewWidget() {
 
   return (
     <div className='tradingview-widget-container'>
-      <div classname='tradingview-widget-container-chart'id='tradingview_dee36' />
+       <div id='tradingview_dee36'></div>
     </div>
   );
 }

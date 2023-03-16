@@ -1,4 +1,8 @@
 .tradingview-widget-container{
-    display: flex;
+    width: 75%;
+    
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     
 }
