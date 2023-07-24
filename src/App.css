@@ -10,6 +10,10 @@ body {
     background: var(--color-bg)
 }
 
+.chart{
+    margin: 4% 1% 2% 25%;
+}
+
 a{
     color: unset;
     text-decoration: none;

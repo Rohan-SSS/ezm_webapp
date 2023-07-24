@@ -1,18 +1,15 @@
-import {  Ticker, Chart, Insights, Input } from './components'
+import { Navbar, Chart, Insights } from './components'
 import './App.css'
 
 const App = () => {
   return (
     <div className='App'>
-      <div >
-        <Ticker />
-      </div>
       <div>
-        <div>
-          <Chart />
+        <div className='navbar'>
+          <Navbar />
         </div>
-        <div>
-          <Input />
+        <div className='chart'>
+          <Chart />
         </div>
       </div>
       <div>
