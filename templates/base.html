@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %} FX Sight {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline ">F X  S i g h t</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li>
+                            <a href="/dashboard" class="nav-link px-0 align-middle" style="margin-left: 16px;">
+                                <i class="fs-4 bi-graph-up-arrow"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="/news_sentiment" class="nav-link px-0 align-middle" style="margin-left: 16px;">
+                                <i class="fs-4 bi-newspaper"></i> <span class="ms-1 d-none d-sm-inline">News and Sentiment</span></a>
+                        </li>
+                        <li>
+                            <a href="/model_specification" class="nav-link px-0 align-middle" style="margin-left: 16px;">
+                                <i class="fs-4 bi-file-earmark-text"></i> <span class="ms-1 d-none d-sm-inline">Model Specification</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle" style="margin-left: 16px;">
+                                <i class="fs-4 bi-file-bar-graph"></i> <span
+                                    class="ms-1 d-none d-sm-inline">Model Performance</span></a>
+                            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                <li class="w-100">
+                                    <a href="/model_specification/eurusd" class="nav-link px-0" style="margin-left: 20px;"> <span class="d-none d-sm-inline">EURUSD</span>
+                                        </a>
+                                </li>
+                                <li>
+                                    <a href="/model_specification/gbpusd" class="nav-link px-0" style="margin-left: 20px;"> <span class="d-none d-sm-inline">GBPUSD</span>
+                                        </a>
+                                </li>
+                                <li>
+                                    <a href="/model_specification/xauusd" class="nav-link px-0" style="margin-left: 20px;"> <span class="d-none d-sm-inline">XAUUSD</span>
+                                        </a>
+                                </li>
+                                <li>
+                                    <a href="/model_specification/crude" class="nav-link px-0" style="margin-left: 20px;"> <span class="d-none d-sm-inline">CRUDE</span>
+                                        </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        style="position: absolute; bottom: 20px; left: 20px;">
+                        <li>
+                            <a href="https://github.com/Rohan-SSS/" class="nav-link px-0 align-middle" >
+                                <i class="fs-8 bi-github"></i> <span class="ms-1 d-none d-sm-inline">Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/rohan-singh-774025243/" class="nav-link px-0 align-middle">
+                                <i class="fs-8 bi-linkedin"></i> <span class="ms-1 d-none d-sm-inline">Linkedin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:singhrohan2533@gmail..com" class="nav-link px-0 align-middle">
+                                <i class="fs-8 bi-envelope-at"></i> <span class="ms-1 d-none d-sm-inline">Gmail</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <div class="col py-3">
+                {% block body %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    {% block script %}
+    {% endblock %}
+</body>
+
+</html>
