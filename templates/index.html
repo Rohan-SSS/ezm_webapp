@@ -3,272 +3,381 @@
 <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 <script>
-      // Chart code
-      am5.ready(function () {
-          var root = am5.Root.new("candlestickChartDiv");
-          root.setThemes([am5themes_Animated.new(root)]);
+	  // Chart code
+	  am5.ready(function () {
+	      var root = am5.Root.new("candlestickChartDiv");
+	      root.setThemes([am5themes_Animated.new(root)]);
 
-          var data = {{ custom_data | tojson
-      }};
+	      var data = {{ custom_data | tojson
+	  }};
 
-      // Create chart
-      var chart = root.container.children.push(
-          am5xy.XYChart.new(root, {
-              focusable: true,
-              panX: true,
-              panY: true,
-              wheelX: "panX",
-              wheelY: "zoomX"
-          })
-      );
+	  // Create chart
+	  var chart = root.container.children.push(
+	      am5xy.XYChart.new(root, {
+	          focusable: true,
+	          panX: true,
+	          panY: true,
+	          wheelX: "panX",
+	          wheelY: "zoomX"
+	      })
+	  );
 
-      // Create axes
-      var xAxis = chart.xAxes.push(
-          am5xy.DateAxis.new(root, {
-              groupData: true,
-              maxDeviation: 0.5,
-              baseInterval: { timeUnit: "minute", count: 30 },
-              renderer: am5xy.AxisRendererX.new(root, { pan: "zoom" }),
-              tooltip: am5.Tooltip.new(root, {})
-          })
-      );
+	  // Create axes
+	  var xAxis = chart.xAxes.push(
+	      am5xy.DateAxis.new(root, {
+	          groupData: true,
+	          maxDeviation: 0.5,
+	          baseInterval: { timeUnit: "minute", count: 30 },
+	          renderer: am5xy.AxisRendererX.new(root, { pan: "zoom" }),
+	          tooltip: am5.Tooltip.new(root, {})
+	      })
+	  );
 
-      var yAxis = chart.yAxes.push(
-          am5xy.ValueAxis.new(root, {
-              maxDeviation: 1,
-              renderer: am5xy.AxisRendererY.new(root, { pan: "zoom" })
-          })
-      );
+	  var yAxis = chart.yAxes.push(
+	      am5xy.ValueAxis.new(root, {
+	          maxDeviation: 1,
+	          renderer: am5xy.AxisRendererY.new(root, { pan: "zoom" })
+	      })
+	  );
 
-      var color = root.interfaceColors.get("background");
+	  var color = root.interfaceColors.get("background");
 
-      // Add series
-      var series = chart.series.push(
-          am5xy.CandlestickSeries.new(root, {
-              fill: color,
-              calculateAggregates: true,
-              stroke: color,
-              name: "EURUSD",
-              xAxis: xAxis,
-              yAxis: yAxis,
-              valueYField: "value",
-              openValueYField: "open",
-              lowValueYField: "low",
-              highValueYField: "high",
-              valueXField: "date",
-              lowValueYGrouped: "low",
-              highValueYGrouped: "high",
-              openValueYGrouped: "open",
-              valueYGrouped: "close",
-              legendValueText:
-                  "open: {openValueY} low: {lowValueY} high: {highValueY} close: {valueY}",
-              legendRangeValueText: "{valueYClose}",
-              tooltip: am5.Tooltip.new(root, {
-                  pointerOrientation: "horizontal",
-                  labelText: "open: {openValueY}\nlow: {lowValueY}\nhigh: {highValueY}\nclose: {valueY}"
-              })
-          })
-      );
+	  // Add series
+	  var series = chart.series.push(
+	      am5xy.CandlestickSeries.new(root, {
+	          fill: color,
+	          calculateAggregates: true,
+	          stroke: color,
+	          name: "EURUSD",
+	          xAxis: xAxis,
+	          yAxis: yAxis,
+	          valueYField: "value",
+	          openValueYField: "open",
+	          lowValueYField: "low",
+	          highValueYField: "high",
+	          valueXField: "date",
+	          lowValueYGrouped: "low",
+	          highValueYGrouped: "high",
+	          openValueYGrouped: "open",
+	          valueYGrouped: "close",
+	          legendValueText:
+	              "open: {openValueY} low: {lowValueY} high: {highValueY} close: {valueY}",
+	          legendRangeValueText: "{valueYClose}",
+	          tooltip: am5.Tooltip.new(root, {
+	              pointerOrientation: "horizontal",
+	              labelText: "open: {openValueY}\nlow: {lowValueY}\nhigh: {highValueY}\nclose: {valueY}"
+	          })
+	      })
+	  );
 
-      // Add cursor
-      var cursor = chart.set(
-          "cursor",
-          am5xy.XYCursor.new(root, {
-              xAxis: xAxis
-          })
-      );
-      cursor.lineY.set("visible", false);
+	  // Add cursor
+	  var cursor = chart.set(
+	      "cursor",
+	      am5xy.XYCursor.new(root, {
+	          xAxis: xAxis
+	      })
+	  );
+	  cursor.lineY.set("visible", false);
 
-      chart.leftAxesContainer.set("layout", root.verticalLayout);
+	  chart.leftAxesContainer.set("layout", root.verticalLayout);
 
-      // Add scrollbar
-      var scrollbar = am5xy.XYChartScrollbar.new(root, {
-          orientation: "horizontal",
-          height: 30
-      });
-      chart.set("scrollbarX", scrollbar);
+	  // Add scrollbar
+	  var scrollbar = am5xy.XYChartScrollbar.new(root, {
+	      orientation: "horizontal",
+	      height: 30
+	  });
+	  chart.set("scrollbarX", scrollbar);
 
-      var sbxAxis = scrollbar.chart.xAxes.push(
-          am5xy.DateAxis.new(root, {
-              groupData: true,
-              groupIntervals: [{ timeUnit: "day", count: 2 }],
-              baseInterval: { timeUnit: "day", count: 1 },
-              renderer: am5xy.AxisRendererX.new(root, {
-                  opposite: false,
-                  strokeOpacity: 0
-              })
-          })
-      );
+	  var sbxAxis = scrollbar.chart.xAxes.push(
+	      am5xy.DateAxis.new(root, {
+	          groupData: true,
+	          groupIntervals: [{ timeUnit: "day", count: 2 }],
+	          baseInterval: { timeUnit: "day", count: 1 },
+	          renderer: am5xy.AxisRendererX.new(root, {
+	              opposite: false,
+	              strokeOpacity: 0
+	          })
+	      })
+	  );
 
-      var sbyAxis = scrollbar.chart.yAxes.push(
-          am5xy.ValueAxis.new(root, {
-              renderer: am5xy.AxisRendererY.new(root, {})
-          })
-      );
+	  var sbyAxis = scrollbar.chart.yAxes.push(
+	      am5xy.ValueAxis.new(root, {
+	          renderer: am5xy.AxisRendererY.new(root, {})
+	      })
+	  );
 
-      var sbseries = scrollbar.chart.series.push(
-          am5xy.LineSeries.new(root, {
-              xAxis: sbxAxis,
-              yAxis: sbyAxis,
-              valueYField: "value",
-              valueXField: "date"
-          })
-      );
+	  var sbseries = scrollbar.chart.series.push(
+	      am5xy.LineSeries.new(root, {
+	          xAxis: sbxAxis,
+	          yAxis: sbyAxis,
+	          valueYField: "value",
+	          valueXField: "date"
+	      })
+	  );
 
-      // Add legend
-      var legend = yAxis.axisHeader.children.push(am5.Legend.new(root, {}));
+	  // Add legend
+	  var legend = yAxis.axisHeader.children.push(am5.Legend.new(root, {}));
 
-      legend.data.push(series);
+	  legend.data.push(series);
 
-      legend.markers.template.setAll({
-          width: 10
-      });
+	  legend.markers.template.setAll({
+	      width: 10
+	  });
 
-      legend.markerRectangles.template.setAll({
-          cornerRadiusTR: 0,
-          cornerRadiusBR: 0,
-          cornerRadiusTL: 0,
-          cornerRadiusBL: 0
-      });
+	  legend.markerRectangles.template.setAll({
+	      cornerRadiusTR: 0,
+	      cornerRadiusBR: 0,
+	      cornerRadiusTL: 0,
+	      cornerRadiusBL: 0
+	  });
 
-      // set data
-      series.data.setAll(data);
-      sbseries.data.setAll(data);
+	  // set data
+	  series.data.setAll(data);
+	  sbseries.data.setAll(data);
 
-      // Make stuff animate on load
-      series.appear(1000);
-      chart.appear(1000, 100);
+	  // Make stuff animate on load
+	  series.appear(1000);
+	  chart.appear(1000, 100);
 
-      }); // end am5.ready()
+	  }); // end am5.ready()
 
 
 
-    // MACD CHART
-    am5.ready(function () {
-      var root = am5.Root.new("macdChartDiv");
-      root.setThemes([am5themes_Animated.new(root)]);
+	// MACD CHART
+	am5.ready(function () {
+	  var root = am5.Root.new("macdChartDiv");
+	  root.setThemes([am5themes_Animated.new(root)]);
 
-      var macdData ={{ macd_data | tojson }};
-      console.log(macdData)
+	  var macdData ={{ macd_data | tojson }};
 
-      var chart = root.container.children.push(
-        am5xy.XYChart.new(root, {
-          panX: true,
-          panY: true,
-          wheelX: "panX",
-          wheelY: "zoomX",
-          pinchZoomX: true,
-        })
-      );
+	  var chart = root.container.children.push(
+	    am5xy.XYChart.new(root, {
+	      panX: true,
+	      panY: true,
+	      wheelX: "panX",
+	      wheelY: "zoomX",
+	      pinchZoomX: true,
+	    })
+	  );
 
-      chart.get("colors").set("step", 3);
+	  chart.get("colors").set("step", 3);
 
-      var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
-      cursor.lineY.set("visible", false);
+	  var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+	  cursor.lineY.set("visible", false);
 
-      var xAxis = chart.xAxes.push(
-        am5xy.DateAxis.new(root, {
-          maxDeviation: 1,
-          baseInterval: {
-            timeUnit: "minute",
-            count: 30,
-          },
-          renderer: am5xy.AxisRendererX.new(root, {}),
-          tooltip: am5.Tooltip.new(root, {}),
-        })
-      );
+	  var xAxis = chart.xAxes.push(
+	    am5xy.DateAxis.new(root, {
+	      maxDeviation: 1,
+	      baseInterval: {
+	        timeUnit: "minute",
+	        count: 30,
+	      },
+	      renderer: am5xy.AxisRendererX.new(root, {}),
+	      tooltip: am5.Tooltip.new(root, {}),
+	    })
+	  );
 
-      var yAxis = chart.yAxes.push(
-        am5xy.ValueAxis.new(root, {
-          maxDeviation: 0.3,
-          renderer: am5xy.AxisRendererY.new(root, {}),
-        })
-      );
+	  var yAxis = chart.yAxes.push(
+	    am5xy.ValueAxis.new(root, {
+	      maxDeviation: 0.3,
+	      renderer: am5xy.AxisRendererY.new(root, {}),
+	    })
+	  );
 
-      var macd_line = chart.series.push(
-        am5xy.LineSeries.new(root, {
-          name: "MACD Line",
-          xAxis: xAxis,
-          yAxis: yAxis,
-          valueYField: "macd_line",
-          valueXField: "date",
-          tooltip: am5.Tooltip.new(root, {
-            labelText: "MACD Line: {valueY}",
-          }),
-        })
-      );
+	  var macd_line = chart.series.push(
+	    am5xy.LineSeries.new(root, {
+	      name: "MACD Line",
+	      xAxis: xAxis,
+	      yAxis: yAxis,
+	      valueYField: "macd_line",
+	      valueXField: "date",
+	      tooltip: am5.Tooltip.new(root, {
+	        labelText: "MACD Line: {valueY}",
+	      }),
+	    })
+	  );
 
-      macd_line.strokes.template.setAll({
-        strokeWidth: 2,
-      });
+	  macd_line.strokes.template.setAll({
+	    strokeWidth: 1,
+	  });
 
-      macd_line.get("tooltip").get("background").set("fillOpacity", 0.5);
+	  macd_line.get("tooltip").get("background").set("fillOpacity", 0.5);
 
-      var macd_signal = chart.series.push(
-        am5xy.LineSeries.new(root, {
-          name: "MACD Signal",
-          xAxis: xAxis,
-          yAxis: yAxis,
-          valueYField: "macd_signal",
-          valueXField: "date",
-        })
-      );
-      macd_signal.strokes.template.setAll({
-        strokeDasharray: [2, 2],
-        strokeWidth: 2,
-      });
+	  var macd_signal = chart.series.push(
+	    am5xy.LineSeries.new(root, {
+	      name: "MACD Signal",
+	      xAxis: xAxis,
+	      yAxis: yAxis,
+	      valueYField: "macd_signal",
+	      valueXField: "date",
+	    })
+	  );
+	  macd_signal.strokes.template.setAll({
+	    strokeDasharray: [4, 2],
+	    strokeWidth: 1,
+	  });
 
-      root.dateFormatter.setAll({
-        dateFormat: "yyyy-MM-dd",
-        dateFields: ["valueX"],
-      });
+	  root.dateFormatter.setAll({
+	    dateFormat: "yyyy-MM-dd",
+	    dateFields: ["valueX"],
+	  });
 
-      macd_line.data.setAll(macdData);
-      macd_signal.data.setAll(macdData);
+	  macd_line.data.setAll(macdData);
+	  macd_signal.data.setAll(macdData);
 
-      macd_line.appear(1000);
-      macd_signal.appear(1000);
-      chart.appear(1000, 100);
-    });
+	  macd_line.appear(1000);
+	  macd_signal.appear(1000);
+	  chart.appear(1000, 100);
+	});
+
+
+	// Stochastic Chart
+	am5.ready(function() {
+	  var root = am5.Root.new('stochasticChartDiv');
+	  root.setThemes([am5themes_Animated.new(root)]);
+
+	  var srsiData = {{ srsi_data | tojson }};
+
+	  var chart = root.container.children.push(
+	    am5xy.XYChart.new(root, {
+	      panX: true,
+	      panY: true,
+	      wheelX: "panX",
+	      wheelY: "zoomX",
+	      pinchZoomX: true,
+	    })
+	  );
+
+	  chart.get("colors").set("step", 3);
+
+	  var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {}));
+	  cursor.lineY.set("visible", false);
+
+	  var xAxis = chart.xAxes.push(
+	    am5xy.DateAxis.new(root, {
+	      maxDeviation: 1,
+	      baseInterval: {
+	        timeUnit: "minute",
+	        count: 30,
+	      },
+	      renderer: am5xy.AxisRendererX.new(root, {}),
+	      tooltip: am5.Tooltip.new(root, {}),
+	    })
+	  );
+
+	  var yAxis = chart.yAxes.push(
+	    am5xy.ValueAxis.new(root, {
+	      maxDeviation: 0.1,
+	      renderer: am5xy.AxisRendererY.new(root, {}),
+	    })
+	  );
+
+	  var stochastic_k = chart.series.push(
+	    am5xy.LineSeries.new(root, {
+	      name: "Stochastic K",
+	      xAxis: xAxis,
+	      yAxis: yAxis,
+	      valueYField: "stochastic_k",
+	      valueXField: "date",
+	      tooltip: am5.Tooltip.new(root, {
+	        labelText: "Stochastic K: {valueY}",
+	      }),
+	    })
+	  );
+
+	  stochastic_k.strokes.template.setAll({
+	    strokeWidth:1,
+	  });
+
+	  stochastic_k.get("tooltip").get("background").set("fillOpacity", 0.5);
+
+	  var stochastic_d = chart.series.push(
+	    am5xy.LineSeries.new(root, {
+	      name: "Stochastic D",
+	      xAxis: xAxis,
+	      yAxis: yAxis,
+	      valueYField: "stochastic_d",
+	      valueXField: "date",
+	    })
+	  );
+
+	  stochastic_d.strokes.template.setAll({
+	    strokeDasharray: [4, 2],
+	    strokeWidth: 1,
+	  });
+
+	  root.dateFormatter.setAll({
+	    dateFormat: "yyyy-MM-dd",
+	    dateFields: ["valueX"],
+	  });
+
+	  stochastic_k.data.setAll(srsiData);
+	  stochastic_d.data.setAll(srsiData);
+
+	  stochastic_k.appear(1000);
+	  stochastic_d.appear(1000);
+	  chart.appear(1000, 100);
+
+	});
 </script>
 
 {% endblock %} {% block body %}
 
 <div class="indexPage">
-    <div
-        id="candlestickChartDiv"
-        class="tradingChart"
-        style="
-            width: 90%;
-            height: 480px;
-            max-width: 100%;
-            transform: translate(5%, 0);
-            background-color: white;
-            border: 1px #adadad solid;
-            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(0, 0, 0, 0.1);
-            border-radius: 16px;
-        "
-    ></div>
-    <div class="technicalAnalysis" style="margin: 48px 0px 0px 0px;">
-        <h4 style="margin: 48px 0px 24px 24px;">Technical Analysis</h4>
-        <hr />
-        <h6 style="margin: 24px 0px 24px 24px;">Moving average convergence divergence indicator (26, 12, 9)</h6>
-        <div
-            id="macdChartDiv"
-            class="macdChart"
-            style="
-                width: 90%;
-                height: 176px;
-                max-width: 90%;
-                margin-top: 24px;
-                transform: translate(5%, 0);
-                background-color: white;
-                border: 1px solid #adadad;
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-                border-radius: 16px;
-            "
-        ></div>
-    </div>
+	<div
+		id="candlestickChartDiv"
+		class="tradingChart"
+		style="
+			width: 90%;
+			height: 480px;
+			max-width: 100%;
+			transform: translate(5%, 0);
+			background-color: white;
+			border: 1px #adadad solid;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			border-radius: 16px;
+		"
+	></div>
+	<div class="technicalAnalysis" style="margin: 48px 0px 0px 0px">
+		<h4 style="margin: 48px 0px 24px 24px">Technical Analysis</h4>
+		<hr />
+		<h6 style="margin: 24px 0px 24px 24px">
+			Moving average convergence divergence indicator (26, 12, 9)
+		</h6>
+		<div
+			id="macdChartDiv"
+			class="macdChart"
+			style="
+				width: 90%;
+				height: 216px;
+				max-width: 90%;
+				margin-top: 24px;
+				transform: translate(5%, 0);
+				background-color: white;
+				border: 1px solid #adadad;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+				border-radius: 16px;
+			"
+		></div>
+    <h6 style="margin: 24px 0px 24px 24px">
+			Stochastic relative strength index indicator (14, 3, 3)
+		</h6>
+		<div
+			id="stochasticChartDiv"
+			class="srsiChart" 
+			style="
+				width: 90%;
+				height: 216px;
+				max-width: 90%;
+				margin-top: 24px;
+				transform: translate(5%, 0);
+				background-color: white;
+				border: 1px solid #adadad;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+				border-radius: 16px;
+			"
+		></div>
+	</div>
 </div>
 
 {% endblock %}

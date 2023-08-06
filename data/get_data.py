@@ -3,17 +3,18 @@ from datetime import datetime, timedelta
 import numpy as np
 import pandas as pd
 from ta.trend import MACD
+from ta.momentum import StochRSIIndicator
 
 df = pd.read_csv('data/EURUSD_M30.csv', sep='\t')
 df = df.rename({'Time':'time', 'Open':'open', 'High':'high', 'Low':'low', 'Close':'close'}, axis=1)
 df = df.drop('Volume', axis=1)
 df = df[-200::1]
 
-def generate_custom_data(num_points):
+def generate_custom_data():
 
     data = []
 
-    for i in range(num_points):
+    for i in range(df.shape[0]):
         row = df.iloc[i]
         
         timestamp_str = row['time']
@@ -36,19 +37,19 @@ def generate_custom_data(num_points):
 
     return data
 
-def generate_macd(num_points):
+def generate_macd():
     macd_indicator = MACD(close=df['close'], window_slow=26, window_fast=12, window_sign=9, fillna=True)
     df['macd_line'] = macd_indicator.macd()
     df['macd_signal'] = macd_indicator.macd_signal()
 
     data = []
 
-    for i in range(num_points):
+    for i in range(df.shape[0]):
         row = df.iloc[i]
         
         timestamp_str = row['time']
-        macd_line = row['macd_line']
-        macd_signal = row['macd_signal']
+        macd_line = row['macd_line'].round(6)
+        macd_signal = row['macd_signal'].round(6)
         timestamp = int(datetime.strptime(timestamp_str, '%Y-%m-%d %H:%M:%S').timestamp()) * 1000
         
         data_point = {
@@ -60,3 +61,30 @@ def generate_macd(num_points):
         data.append(data_point)
 
     return data
+
+
+def get_stochastic_rsi():
+    stochastic_rsi = StochRSIIndicator(close=df['close'], window=14, fillna=True)
+    df['stochastic_k'] = stochastic_rsi.stochrsi_k()
+    df['stochastic_d'] = stochastic_rsi.stochrsi_d()
+
+    data = []
+
+    for i in range(df.shape[0]):
+        row = df.iloc[i]
+
+        timestamp_str = row['time']
+        stochastic_k = row['stochastic_k'].round(2)
+        stochastic_d = row['stochastic_d'].round(2)
+        timestamp = int(datetime.strptime(timestamp_str, '%Y-%m-%d %H:%M:%S').timestamp()) * 1000
+
+        data_point = {
+            "date": timestamp,
+            "stochastic_k": stochastic_k,
+            "stochastic_d": stochastic_d
+        }
+
+        data.append(data_point)
+    
+    return data
+
