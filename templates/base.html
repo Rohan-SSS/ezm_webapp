@@ -16,8 +16,8 @@
 <body>
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ">
+                <div class="sidebar d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100;" style="position:fixed; height: 100vh;">
                     <a href="/"
                         class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline ">F X  S i g h t</span>
@@ -26,19 +26,19 @@
                         id="menu">
                         <li>
                             <a href="/dashboard" class="nav-link px-0 align-middle" style="margin-left: 16px;">
-                                <i class="fs-4 bi-graph-up-arrow"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
+                                <i class="fs-5 bi-graph-up-arrow"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span></a>
                         </li>
                         <li>
                             <a href="/news_sentiment" class="nav-link px-0 align-middle" style="margin-left: 16px;">
-                                <i class="fs-4 bi-newspaper"></i> <span class="ms-1 d-none d-sm-inline">News and Sentiment</span></a>
+                                <i class="fs-5 bi-newspaper"></i> <span class="ms-1 d-none d-sm-inline">News and Sentiment</span></a>
                         </li>
                         <li>
                             <a href="/model_specification" class="nav-link px-0 align-middle" style="margin-left: 16px;">
-                                <i class="fs-4 bi-file-earmark-text"></i> <span class="ms-1 d-none d-sm-inline">Model Specification</span></a>
+                                <i class="fs-5 bi-file-earmark-text"></i> <span class="ms-1 d-none d-sm-inline">Model Specification</span></a>
                         </li>
                         <li>
                             <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle" style="margin-left: 16px;">
-                                <i class="fs-4 bi-file-bar-graph"></i> <span
+                                <i class="fs-5 bi-file-bar-graph"></i> <span
                                     class="ms-1 d-none d-sm-inline">Model Performance</span></a>
                             <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
                                 <li class="w-100">
@@ -72,16 +72,11 @@
                                 <i class="fs-8 bi-linkedin"></i> <span class="ms-1 d-none d-sm-inline">Linkedin</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="mailto:singhrohan2533@gmail..com" class="nav-link px-0 align-middle">
-                                <i class="fs-8 bi-envelope-at"></i> <span class="ms-1 d-none d-sm-inline">Gmail</span>
-                            </a>
-                        </li>
                     </ul>
                     <hr>
                 </div>
             </div>
-            <div class="col py-3">
+            <div class="content col py-3">
                 {% block body %}
 
                 {% endblock %}

@@ -6,8 +6,9 @@ app = Flask(__name__, template_folder='./templates')
 @app.route('/')
 @app.route('/dashboard')
 def index():
-    custom_data = generate_custom_data(200)
-    return render_template('index.html', custom_data=custom_data)
+    custom_data = generate_custom_data(160)
+    macd_data = generate_macd(160)
+    return render_template('index.html', custom_data=custom_data, macd_data=macd_data)
 
 @app.route('/model_specification')
 def model_preformance():
