@@ -179,7 +179,10 @@
 
 	  var yAxis = chart.yAxes.push(
 	    am5xy.ValueAxis.new(root, {
-	      maxDeviation: 0.3,
+	      maxDeviation: 0.001,
+		  strictMinMax: true,
+		  min:-0.0025,
+		  max:0.0025,
 	      renderer: am5xy.AxisRendererY.new(root, {}),
 	    })
 	  );
@@ -268,6 +271,8 @@
 	  var yAxis = chart.yAxes.push(
 	    am5xy.ValueAxis.new(root, {
 	      maxDeviation: 0.1,
+		  min:0,
+		  max:1,
 	      renderer: am5xy.AxisRendererY.new(root, {}),
 	    })
 	  );

@@ -13,7 +13,10 @@ def index():
 
 @app.route('/model_specification')
 def model_preformance():
-    return render_template('model_specification.html')
+    custom_data = generate_custom_data()
+    macd_data = generate_macd()
+    srsi_data = get_stochastic_rsi()
+    return render_template('model_specification.html', custom_data=custom_data, macd_data=macd_data, srsi_data=srsi_data)
 
 @app.route('/news_sentiment')
 def news_sentiment():
