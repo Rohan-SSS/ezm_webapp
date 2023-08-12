@@ -4,12 +4,35 @@
 News and Sentiment
 {% endblock %}
 
-
 {% block head %}
+
 {% endblock %}
 
-
 {% block body %}
-    news
+<div class="container bcontent">
+    {% for news in news_data %}
+    <div class="card" style="width: 1024px; max-height: 256px; margin-top: 2%;">
+        <div class="row no-gutters">
+            <div class="col-sm-5">
+                <img class="card-img" src="{{ news.image_url }}" alt="{{ news.title }}">
+            </div>
+            <div class="col-sm-7">
+                <div class="card-body">
+                    <h5 class="card-title">{{ news.title }}</h5>
+                    <p class="card-text">{{ news.text }}</p>
+                    <a href="{{ news.news_url }}" class="btn btn-primary">Read more</a>
+                    {% if news.sentiment == "Positive" %}
+                        <a href="#" class="btn btn-success">{{ news.sentiment }}</a>
+                    {% elif news.sentiment == "Neutral" %}
+                        <a href="#" class="btn btn-secondary">{{ news.sentiment }}</a>
+                    {% elif news.sentiment == "Negative" %}
+                        <a href="#" class="btn btn-danger">{{ news.sentiment }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
 

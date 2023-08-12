@@ -1,0 +1,326 @@
+{
+    "data": [
+        {
+            "news_url": "https://www.fxempire.com/forecasts/article/eur-usd-gbp-usd-usd-cad-usd-jpy-u-s-dollar-gains-ground-after-ppi-report-2-1367562",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/g/x/us-dollar-federal-reserve-2-153657.jpg",
+            "title": "EUR/USD, GBP/USD, USD/CAD, USD/JPY - U.S. Dollar Gains Ground After PPI Report",
+            "text": "Producer prices rose more than expected in July, providing support to the American currency.",
+            "source_name": "FXEmpire",
+            "date": "Fri, 11 Aug 2023 12:38:15 -0400",
+            "topics": [
+                "Japan",
+                "USA",
+                "Canada",
+                "United Kingdom",
+                "Europe"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "currency": [
+                "EUR-USD",
+                "GBP-USD",
+                "USD-CAD",
+                "USD-JPY"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-some-upside-potential-over-the-next-two-or-three-quarters-commerzbank-202308111336",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/8/f/f3-153631.jpg",
+            "title": "EUR/USD: Some upside potential over the next two or three quarters - Commerzbank",
+            "text": "Economists at Commerzbank share their ECB and Fed forecasts and their implications for the EUR/USD pair.",
+            "source_name": "FX Street",
+            "date": "Fri, 11 Aug 2023 09:36:49 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxempire.com/forecasts/article/eur-usd-weekly-forecast-euro-continues-to-consolidate-1367466",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/d/x/shutterstock-2186820173-153626.jpg",
+            "title": "EUR/USD Weekly Forecast - Euro Continues to Consolidate",
+            "text": "The euro has gone back and forth during the course of the trading week, as it looks like we are simply consolidating right around the 1.10 level.",
+            "source_name": "FXEmpire",
+            "date": "Fri, 11 Aug 2023 09:12:45 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-seen-trading-back-down-at-107-on-a-three-month-view-nordea-202308111301",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/t/x/f37-153621.jpg",
+            "title": "EUR/USD seen trading back down at 1.07 on a three-month view - Nordea",
+            "text": "Economists at Nordea expect the EUR/USD pair to lose ground toward 1.07 before bouncing back higher.",
+            "source_name": "FX Street",
+            "date": "Fri, 11 Aug 2023 09:01:11 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxempire.com/forecasts/article/eur-usd-forecast-euro-continues-to-see-buyers-on-dips-1367453",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/p/6/shutterstock-2186170089-153614.jpg",
+            "title": "EUR/USD Forecast - Euro Continues to See Buyers on Dips",
+            "text": "The Euro bounced yet again during the trading session on Friday.",
+            "source_name": "FXEmpire",
+            "date": "Fri, 11 Aug 2023 08:45:42 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-technical-pointers-provide-some-conflicting-signals-scotiabank-202308111117",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/4/p/f20-153601.jpg",
+            "title": "EUR/USD: Technical pointers provide some conflicting signals - Scotiabank",
+            "text": "EUR/USD holds in tight range around the 1.10 level. Economists at Scotiabank analyze the pair's outlook.",
+            "source_name": "FX Street",
+            "date": "Fri, 11 Aug 2023 07:17:20 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-looks-likely-to-keep-trading-range-bound-ing-202308110928",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/c/l/f38-153578.jpg",
+            "title": "EUR/USD looks likely to keep trading range-bound - ING",
+            "text": "Economists at ING expect the EUR/USD pair to trade between 1.09 and 1.11.",
+            "source_name": "FX Street",
+            "date": "Fri, 11 Aug 2023 05:28:05 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-to-remain-around-110-if-the-fed-not-fuel-expectations-of-imminent-rate-cuts-commerzbank-202308110702",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/w/y/f16-153557.jpg",
+            "title": "EUR/USD to remain around 1.10 if the Fed not fuel expectations of imminent rate cuts - Commerzbank",
+            "text": "Economists at Commerzbank highlight the conditions required to keep EUR/USD around the 1.10 zone.",
+            "source_name": "FX Street",
+            "date": "Fri, 11 Aug 2023 03:14:05 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxempire.com/forecasts/article/eur-usd-and-1-10-hinged-on-us-producer-price-index-numbers-1367360",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/i/r/eur-2-4-153505.jpg",
+            "title": "EUR/USD and $1.10 Hinged on US Producer Price Index Numbers",
+            "text": "It is another busy day for the EUR/USD. After the market reaction to the US inflation numbers, US producer price index numbers will be in focus today.",
+            "source_name": "FXEmpire",
+            "date": "Fri, 11 Aug 2023 01:30:41 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.exchangerates.org.uk/news/38855/2023-08-10-pound-to-euro-exchange-rate-dragged-lower-eur-usd-gains.html",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/8/g/f23-153566.jpg",
+            "title": "Pound To Euro Exchange Rate Dragged Lower With EUR/USD Gains",
+            "text": "The Pound Euro (GBP/EUR) exchange rate traded narrowly on Thursday, despite a downbeat economic bulletin from the European Central Bank (ECB).",
+            "source_name": "ExchangeRates",
+            "date": "Fri, 11 Aug 2023 01:00:00 -0400",
+            "topics": [
+                "USA",
+                "United Kingdom",
+                "Europe"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "currency": [
+                "EUR-USD",
+                "GBP-EUR"
+            ]
+        },
+        {
+            "news_url": "https://www.exchangerates.org.uk/news/38855/2023-08-10-pound-to-euro-exchange-rate-dragged-lower-with-eur/usd-gains.html",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/z/7/f38-153495.jpg",
+            "title": "Pound to Euro Exchange Rate Dragged Lower With EUR/USD Gains",
+            "text": "The Pound Euro (GBP/EUR) exchange rate traded narrowly on Thursday, despite a downbeat economic bulletin from the European Central Bank (ECB). At the time of writing, GBP/EUR traded at.",
+            "source_name": "ExchangeRates",
+            "date": "Fri, 11 Aug 2023 00:00:00 -0400",
+            "topics": [
+                "USA",
+                "United Kingdom",
+                "Europe"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "currency": [
+                "EUR-USD",
+                "GBP-EUR"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-price-analysis-impending-bear-cross-dilemma-about-ecb-fed-test-euro-bulls-below-11025-hurdle-202308110303",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/o/f/f28-153486.jpg",
+            "title": "EUR/USD Price Analysis: Impending Bear Cross, dilemma about ECB, Fed test Euro bulls below 1.1025 hurdle",
+            "text": "EUR/USD clings to mild gains around 1.0990 as it struggles to defend the three-day uptrend during early Friday morning in Europe, especially amid the mixed bias about the European Central Bank (ECB) and the Federal Reserve (Fed). Also challenging the Euro pair is the presence of more clues of the US inflation conditions on the economic calendar.",
+            "source_name": "FX Street",
+            "date": "Thu, 10 Aug 2023 23:08:18 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-steadies-below-11000-as-fed-officials-welcome-us-inflation-data-ecb-signals-uncertain-times-202308110039",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/g/4/f12-153474.jpg",
+            "title": "EUR/USD steadies below 1.1000 as Fed officials welcome US inflation data, ECB signals uncertain times",
+            "text": "EUR/USD lacks clear directions around 1.0980-85 during early Friday, after a volatile Thursday that initially saw a fresh two-week high before marking a daily closing with minor gains. It's worth noting that the US Dollar's upbeat closing, mainly due to the firmer yields, fails to lure the Euro bears amid indecision about the Federal Reserve's (Fed) next step, as well as due to the mixed European Central Bank (ECB) concerns.",
+            "source_name": "FX Street",
+            "date": "Thu, 10 Aug 2023 20:39:14 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-volatile-amid-us-inflation-data-release-as-us-bond-yields-surged-202308102144",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/c/7/f36-153456.jpg",
+            "title": "EUR/USD volatile amid US inflation data release, as US bond yields surged",
+            "text": "The EUR/USD finished Thursday's session with minuscule gains of  0.06% after printing a weekly high of 1.1065 following the release of inflation data in the United States (US). Nevertheless, it made a U-turn, as high US bond yields underpinned the Greenback; hence the EUR/USD trimmed its earlier gains.",
+            "source_name": "FX Street",
+            "date": "Thu, 10 Aug 2023 17:45:46 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Negative",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.dailyfx.com/news/eur-usd-gains-on-target-us-cpi-has-markets-betting-rates-will-stay-put-20230810.html",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/d/8/f20-153441.jpg",
+            "title": "EUR/USD Gains; On-Target US CPI Has Markets Betting Rates Will Stay Put",
+            "text": "EUR/USD benefitted from a widening view that 2023 won't see any more action from the Fed",
+            "source_name": "DailyFX",
+            "date": "Thu, 10 Aug 2023 13:30:45 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxempire.com/forecasts/article/eur-usd-gbp-usd-usd-cad-usd-jpy-u-s-dollar-rebounds-from-session-lows-as-traders-digest-inflation-data-1367251",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/a/4/dxy1-153434.jpg",
+            "title": "EUR/USD, GBP/USD, USD/CAD, USD/JPY - U.S. Dollar Rebounds From Session Lows As Traders Digest Inflation Data",
+            "text": "U.S. dollar managed to find support as Treasury yields have started to move higher.",
+            "source_name": "FXEmpire",
+            "date": "Thu, 10 Aug 2023 12:34:13 -0400",
+            "topics": [
+                "Japan",
+                "USA",
+                "Canada",
+                "United Kingdom",
+                "Europe"
+            ],
+            "sentiment": "Neutral",
+            "type": "Article",
+            "currency": [
+                "EUR-USD",
+                "GBP-USD",
+                "USD-CAD",
+                "USD-JPY"
+            ]
+        },
+        {
+            "news_url": "https://www.fxstreet.com/news/eur-usd-price-analysis-next-on-the-upside-appears-11150-202308101338",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/s/h/f3-153416.jpg",
+            "title": "EUR/USD Price Analysis: Next on the upside appears 1.1150",
+            "text": "EUR/USD picks up further pace and surpasses the key barrier at 1.1000 the figure on Thursday.",
+            "source_name": "FX Street",
+            "date": "Thu, 10 Aug 2023 09:54:56 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        },
+        {
+            "news_url": "https://www.fxempire.com/forecasts/article/eur-usd-forecast-euro-continues-to-bounce-from-potential-lows-1367198",
+            "image_url": "https://forexnewsapi.snapi.dev/images/v1/v/w/shutterstock-2186056121-1-153404.jpg",
+            "title": "EUR/USD Forecast - Euro Continues to Bounce From Potential Lows",
+            "text": "The Euro bounced a bit during the session on Thursday, as the 50-Day EMA continues to offer a bit of a magnet for price.",
+            "source_name": "FXEmpire",
+            "date": "Thu, 10 Aug 2023 08:59:05 -0400",
+            "topics": [
+                "USA",
+                "Europe"
+            ],
+            "sentiment": "Positive",
+            "type": "Article",
+            "currency": [
+                "EUR-USD"
+            ]
+        }
+    ]
+}
