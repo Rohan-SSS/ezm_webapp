@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from data.get_data import *
+from news.get_news import *
 
 app = Flask(__name__, template_folder='./templates')
 
@@ -20,7 +21,8 @@ def model_preformance():
 
 @app.route('/news_sentiment')
 def news_sentiment():
-    return render_template('news_sentiment.html')
+    news_data = get_news()
+    return render_template('news_sentiment.html', news_data=news_data)
 
 @app.route('/model_specification/eurusd')
 def eurusd():
